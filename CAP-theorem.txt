@@ -1,0 +1,29 @@
+Consistency - Availability - Partition Tolerance 
+
+CAP theorem states that you can only have 2 out of the 3. It is required for defining non-fuctional behaviour of a system
+
+Consistency means, the same data is shown over all the nodes/users.
+Availability means, every requests gets a response (successful or not).
+Partition Tolerance means, system works despite failure in between nodes.
+
+Looking at this, partition Tolerance is usally a must needed factor out of the three. 
+
+Hence the question will mostly be whether to choose Consistency or Availability.
+
+Choose Consistency over Availability where the data is very vital to the system. ex: booking app, stock app, etc... Here the consistency of data is most important.
+Choose Availability over Consistency where the data is not as vital to the system. Ex: In a social media platform, a stale comment is not a big deal rather than showing error.
+
+-------- Things to Note ------------
+
+-- Different part of a system can have different requirements. So, a part of a system can choose Consistency while the other can choose Availability.
+
+In social media: 
+  Profile details can choose Availability but the chat must be consistent.
+
+
+--- Types of Consistency ---
+
+-- Strong -> All reads should relfect most recent write
+-- Causal -> related events should appear in order
+-- Read-your-own-writes -> User should see their own updates
+-- Eventual Consistency -> updates will propagate eventually 
