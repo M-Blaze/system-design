@@ -24,6 +24,6 @@ In social media:
 --- Types of Consistency ---
 
 -- Strong -> All reads should relfect most recent write
--- Causal -> related events should appear in order
--- Read-your-own-writes -> User should see their own updates
+-- Causal -> related events should appear in order (ex: comments in post must be in an order)
+-- Read-your-own-writes -> User should see their own updates immediately
 -- Eventual Consistency -> updates will propagate eventually 
