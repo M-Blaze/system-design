@@ -1,4 +1,4 @@
-### **Cache**
+### Cache
 
 A temporary storage that keeps recently used data for fetching it faster.
 
@@ -15,4 +15,9 @@ A temporary storage that keeps recently used data for fetching it faster.
 - Last In First Out
 - Time To Live (TTL)
 
-###
+### Commmon issues in caching
+
+1. Cache Stampede: It occurs when thousands of requests are being made for a certain cache data. When the data gets evicted there will be thousands of call being made to the database causing a stampede scenario. Fix involves:
+
+- Accepting only the first request made to the db while making the other requests wait for the data to be available on the cache itself
+- **Cache warming**: Keeping the frequently requested cache data updated before the data is evicted from the cache. Hence, never allowing the condition for stampede
