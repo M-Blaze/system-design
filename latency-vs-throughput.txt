@@ -1,0 +1,5 @@
+Latency --> Time required to perform an action or get a result.
+Throughput --> Number of actions done or results given in a specific amount of time.
+
+
+Example: An assembly line takes 8 hour to manufacture a car. It manufactures 120 cars in a day. Then the latency is 8 hours whereas the throughput is 120 cars/day or 5 cars/hr.
